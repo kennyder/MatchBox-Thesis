@@ -4,7 +4,6 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,16 +17,11 @@
          <items>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="600.0" style="-fx-background-color: #FFAC05;">
                <children>
-                  <TextField layoutX="336.0" layoutY="212.0" prefHeight="25.0" prefWidth="159.0" promptText="Search..." />
-                  <Button fx:id="search" layoutX="509.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleSearchBtn" prefHeight="25.0" prefWidth="77.0" stylesheets="@../../../css/css.css" text="Find" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold Italic" size="12.218181610107422" />
-                     </font></Button>
                   <Button fx:id="results" layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleResultsButton" prefHeight="25.0" prefWidth="139.0" stylesheets="@../../../css/css.css" text="Results" textFill="WHITE">
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
                      </font></Button>
-                  <Button fx:id="fixtures" layoutX="175.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleFixturesBtn" prefHeight="25.0" prefWidth="139.0" stylesheets="@../../../css/css.css" text="Fixtures" textFill="WHITE">
+                  <Button fx:id="fixtures" layoutX="446.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleFixturesBtn" prefHeight="25.0" prefWidth="139.0" stylesheets="@../../../css/css.css" text="Fixtures" textFill="WHITE">
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
                      </font></Button>
@@ -39,23 +33,23 @@
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
                      </font></Button>
-                  <Text layoutX="104.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="𝑴𝒂𝒕𝒄𝒉𝑩𝒐𝒙">
+                  <Text fill="#0b2e47" layoutX="104.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="𝑴𝒂𝒕𝒄𝒉𝑩𝒐𝒙">
                      <font>
                         <Font name="Leelawadee UI" size="79.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="122.0" fitWidth="135.0" layoutX="233.0" layoutY="-12.0">
-                     <image>
-                        <Image url="@../../../../../../../../Downloads/—Pngtree—hand%20drawn%20football%20sport%20clipart_5588154.png" />
-                     </image>
-                  </ImageView>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b2e47" height="122.0" layoutX="-95.0" layoutY="70.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b2e47" height="122.0" layoutX="550.0" layoutY="81.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="377.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../mingefolbal.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TableView fx:id="standings" layoutX="160.0" layoutY="44.0" prefHeight="379.0" prefWidth="600.0" style="-fx-background-color: #0b2e47;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="standings" layoutX="160.0" layoutY="44.0" prefHeight="379.0" prefWidth="600.0" styleClass="column-header-background" stylesheets="@../../../css/css.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <columns>
                         <TableColumn fx:id="spot" prefWidth="44.5090953707695" text="Spot" />
                         <TableColumn fx:id="name" prefWidth="144.87274551391602" text="Name" />

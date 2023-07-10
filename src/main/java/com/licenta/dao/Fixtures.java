@@ -67,11 +67,6 @@ public class Fixtures {
 
     @Override
     public String toString() {
-        return "Fixtures{" +
-                ", date=" + date +
-                ", league='" + league + '\'' +
-                ", homeTeam='" + homeTeam + '\'' +
-                ", awayTeam='" + awayTeam + '\'' +
-                '}';
+        return date + " " + homeTeam + " - " + awayTeam;
     }
 }

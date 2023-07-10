@@ -15,14 +15,14 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #FFAC05;">
                <children>
-                  <Text layoutX="14.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="𝑭𝒂𝒗𝒐𝒓𝒊𝒕𝒆𝒔 𝑳𝒊𝒔𝒕" wrappingWidth="280.0420379638672">
+                  <Text fill="#0b2e47" layoutX="14.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="𝑭𝒂𝒗𝒐𝒓𝒊𝒕𝒆𝒔 𝑳𝒊𝒔𝒕" wrappingWidth="280.0420379638672">
                      <font>
                         <Font size="37.0" />
                      </font>
                   </Text>
-                  <Text fill="#0b2e47" layoutX="127.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MatchBox">
+                  <Text fill="#0b2e47" layoutX="120.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="𝑴𝒂𝒕𝒄𝒉𝑩𝒐𝒙">
                      <font>
-                        <Font name="Franklin Gothic Demi Cond" size="79.0" />
+                        <Font size="70.0" />
                      </font>
                   </Text>
                   <Button fx:id="backToMain" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleBackToMainBtn" prefHeight="34.0" prefWidth="77.0" styleClass="buttonBack" stylesheets="@../../../css/css.css" text="Back" />
@@ -30,16 +30,16 @@
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
                      </font></Button>
-                  <ImageView fitHeight="136.0" fitWidth="156.0" layoutX="430.0" layoutY="101.0">
+                  <ImageView fx:id="imagine" fitHeight="122.0" fitWidth="135.0" layoutX="400.0" layoutY="119.0">
                      <image>
-                        <Image url="@../../../../../../../../Downloads/vecteezy_star_1189167.png" />
+                        <Image url="@../../../../../../../../../../mingefolbal.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="600.0">
                <children>
-                  <ListView layoutX="14.0" layoutY="14.0" prefHeight="386.61816841062483" prefWidth="600.4363428137921" style="-fx-background-color: #0b2e47;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ListView fx:id="echipe" layoutX="14.0" layoutY="14.0" prefHeight="386.61816841062483" prefWidth="600.4363428137921" styleClass="list-cell" stylesheets="@../../../css/css.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
         </items>

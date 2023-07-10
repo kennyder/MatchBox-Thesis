@@ -46,9 +46,9 @@
                         <Font name="System Bold Italic" size="12.218181610107422" />
                      </font></Button>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b2e47" height="186.0" layoutX="-161.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" style="-fx-rotate: 45;" width="215.0" />
-                  <ImageView fitHeight="122.0" fitWidth="135.0" layoutX="361.0" layoutY="-11.0">
+                  <ImageView fx:id="imagine" fitHeight="122.0" fitWidth="135.0" layoutX="361.0" layoutY="-11.0">
                      <image>
-                        <Image url="@../../../../../../../../Downloads/—Pngtree—hand%20drawn%20football%20sport%20clipart_5588154.png" />
+                        <Image url="@../../../../../../../../../../mingefolbal.png" />
                      </image>
                   </ImageView>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b2e47" height="186.0" layoutX="543.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" style="-fx-rotate: 45;" width="215.0" />
@@ -56,7 +56,7 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="361.0" prefWidth="600.0">
                <children>
-                  <ListView fx:id="listaMeciuri" layoutY="14.0" prefHeight="379.0" prefWidth="600.0" style="-fx-background-color: #0b2e47;" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                  <ListView fx:id="listaMeciuri" layoutY="14.0" prefHeight="379.0" prefWidth="600.0" styleClass="list-cell" stylesheets="@../../../css/css.css" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
                      <contextMenu>
                         <ContextMenu>
                            <items>

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenePane" prefHeight="638.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.CompareStatsControllerTeams">
+<AnchorPane fx:id="scenePane" prefHeight="638.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.CompareStatsControllerPlayers">
    <children>
       <SplitPane dividerPositions="0.5094339622641509" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -19,45 +19,48 @@
                   <Button fx:id="backToMain" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToMainBtn" prefHeight="34.0" prefWidth="77.0" styleClass="buttonBack" stylesheets="@../../../css/css.css" text="Back">
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <TextField fx:id="textSearch1" layoutX="13.0" layoutY="282.0" promptText="Search.." />
                   <TextField fx:id="textSearch2" layoutX="438.0" layoutY="282.0" promptText="Search.." />
                   <Button fx:id="exit" layoutX="523.0" layoutY="12.0" mnemonicParsing="false" onAction="#Exit" prefHeight="26.0" prefWidth="63.0" stylesheets="@../../../css/css.css" text="Exit" textFill="WHITE">
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
-                     </font></Button>
-                  <Button fx:id="search1" layoutX="179.0" layoutY="282.0" mnemonicParsing="false" onAction="#searchTeam1" prefHeight="26.0" prefWidth="84.0" stylesheets="@../../../css/css.css" text="Find" textFill="WHITE">
+                     </font>
+                  </Button>
+                  <Button fx:id="search1" layoutX="179.0" layoutY="282.0" mnemonicParsing="false" onAction="#searchPlayer1" prefHeight="26.0" prefWidth="84.0" stylesheets="@../../../css/css.css" text="Find" textFill="WHITE">
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
                      </font>
                   </Button>
-                  <Button fx:id="search2" layoutX="336.0" layoutY="282.0" mnemonicParsing="false" onAction="#searchTeam2" prefHeight="26.0" prefWidth="84.0" stylesheets="@../../../css/css.css" text="Find" textFill="WHITE">
+                  <Button fx:id="search2" layoutX="336.0" layoutY="282.0" mnemonicParsing="false" onAction="#searchPlayer2" prefHeight="26.0" prefWidth="84.0" stylesheets="@../../../css/css.css" text="Find" textFill="WHITE">
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
                      </font>
                   </Button>
-                  <Label layoutX="111.0" layoutY="61.0" text="Arsenal">
+                  <Label layoutX="88.0" layoutY="61.0" text="Neymar">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label layoutX="312.0" layoutY="61.0" text="Manchester United">
+                  <Label layoutX="386.0" layoutY="61.0" text="Nkunku">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Button fx:id="backToPlayers" layoutX="258.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleBackToPlayers" prefHeight="26.0" prefWidth="84.0" stylesheets="@../../../css/css.css" text="Players" textFill="WHITE">
+                  <Button fx:id="backToTeams" layoutX="258.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleBackToTeams" prefHeight="26.0" prefWidth="84.0" stylesheets="@../../../css/css.css" text="Teams" textFill="WHITE">
                      <font>
                         <Font name="System Bold Italic" size="12.218181610107422" />
                      </font>
                   </Button>
-                  <ImageView fx:id="logo1" fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="logo1" fitHeight="150.0" fitWidth="200.0" layoutX="64.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="logoLabel" layoutX="60.0" layoutY="106.0" prefHeight="17.0" prefWidth="8.0" />
+                  <Label fx:id="logo2Label" layoutX="364.0" layoutY="106.0" />
                   <ImageView fx:id="logo2" fitHeight="150.0" fitWidth="200.0" layoutX="363.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../../../../33.png" />
-                     </image></ImageView>
-                  <Label fx:id="logo1Label" layoutX="92.0" layoutY="108.0" prefHeight="17.0" prefWidth="6.0" />
-                  <Label fx:id="logo2Label" layoutX="362.0" layoutY="108.0" prefHeight="17.0" prefWidth="6.0" />
+                        <Image url="@../../../../../../../../../../269.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
@@ -66,12 +69,12 @@
                      <items>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <ListView fx:id="team1" layoutX="22.0" layoutY="32.0" prefHeight="320.0" prefWidth="296.0" styleClass="list-cell" stylesheets="@../../../css/css.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ListView fx:id="player1" layoutX="22.0" layoutY="32.0" prefHeight="320.0" prefWidth="296.0" styleClass="list-cell" stylesheets="@../../../css/css.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <ListView fx:id="team2" layoutX="48.0" layoutY="38.0" prefHeight="320.0" prefWidth="296.0" styleClass="list-cell" stylesheets="@../../../css/css.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ListView fx:id="player2" layoutX="48.0" layoutY="38.0" prefHeight="320.0" prefWidth="296.0" styleClass="list-cell" stylesheets="@../../../css/css.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </items>

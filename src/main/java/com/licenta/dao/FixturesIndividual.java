@@ -4,14 +4,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Results extends Fixtures {
+public class FixturesIndividual {
+
     private SimpleDateFormat df = new SimpleDateFormat ("yyyy-MM-dd'T'HH:mm:ssXXX");
     Date date;
     String league;
     String homeTeam;
     String awayTeam;
-    long homeGoals;
-    long awayGoals;
 
     public SimpleDateFormat getDf() {
         return df;
@@ -58,34 +57,17 @@ public class Results extends Fixtures {
         this.awayTeam = awayTeam;
     }
 
-    public long getHomeGoals() {
-        return homeGoals;
-    }
-
-    public void setHomeGoals(long homeGoals) {
-        this.homeGoals = homeGoals;
-    }
-
-    public long getAwayGoals() {
-        return awayGoals;
-    }
-
-    public void setAwayGoals(long awayGoals) {
-        this.awayGoals = awayGoals;
-    }
-
-    public Results() {
+    public FixturesIndividual() {
         this.df = df;
         this.date = date;
         this.league = league;
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
-        this.homeGoals = homeGoals;
-        this.awayGoals = awayGoals;
     }
 
     @Override
     public String toString() {
-        return date + "  " + homeTeam + " " + homeGoals + " - "+ awayGoals + " " + awayTeam + " > " + league;
+        return date + " " + homeTeam + " - " + awayTeam + " > " + league;
     }
+
 }
